@@ -23,17 +23,17 @@ ASP.NET Core MVC User Management
 🔹 Структура проекта:
 
 ``` mockup
-HelloMVC/ <br />
-├── Controllers/ <br />
-│   └── UserController.cs      # Обработка HTTP-запросов <br />
-├── Models/ <br />
-│   ├── User.cs                # Модель данных <br />
-│   └── UserDbContext.cs       # Контекст БД <br />
-├── Views/ <br />
-│   └── User/ <br />
-│       ├── Index.cshtml       # Список пользователей <br />
-│       └── Editor.cshtml     # Форма редактирования <br />
-└── appsettings.json           # Конфигурация SQLite <br />
+HelloMVC/
+├── Controllers/
+│   └── UserController.cs      # Обработка HTTP-запросов 
+├── Models/ 
+│   ├── User.cs                # Модель данных
+│   └── UserDbContext.cs       # Контекст БД 
+├── Views/ 
+│   └── User/ 
+│       ├── Index.cshtml       # Список пользователей 
+│       └── Editor.cshtml     # Форма редактирования 
+└── appsettings.json           # Конфигурация SQLite
 ```
 
 🔹 Отличия от Razor Pages версии:
