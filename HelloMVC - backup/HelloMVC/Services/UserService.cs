@@ -5,7 +5,7 @@ namespace HelloMVC.Services
     public class UserService
     {
         private List<User> _users;
-        private int _nextId = 1;
+        private int _lastId = 1;
 
         public UserService()
         {
@@ -16,7 +16,7 @@ namespace HelloMVC.Services
             };
         }
 
-        private int GetCurrentNextId() => _nextId++;
+        private int GetCurrentNextId() => _lastId++;
 
         public List<User> GetAll() => _users;
 
