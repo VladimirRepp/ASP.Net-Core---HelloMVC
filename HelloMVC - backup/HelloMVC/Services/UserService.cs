@@ -23,7 +23,7 @@ namespace HelloMVC.Services
 
         public List<User> GetAll() => _users;
 
-        public User GetById(int id) => _users.FirstOrDefault(u => u.Id == id);
+        public User? GetById(int id) => _users.FirstOrDefault(u => u.Id == id);
 
         public User Add(User user)
         {
