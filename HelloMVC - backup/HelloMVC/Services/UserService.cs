@@ -9,14 +9,17 @@ namespace HelloMVC.Services
 
         public UserService()
         {
-            _users = new List<User>
-            {
-                new User { Id = GetCurrentNextId(), Login = "user1", Password = "pass1" },
-                new User { Id = GetCurrentNextId(), Login = "user2", Password = "pass2" }
-            };
+            _users = new ();
+            GetDataFromSource();
         }
 
         private int GetCurrentNextId() => _lastId++;
+
+        public void GetDataFromSource()
+        {
+           _users.Add(new User { Id = GetCurrentNextId(), Login = "user1", Password = "pass1" });
+           _users.Add(new User { Id = GetCurrentNextId(), Login = "user2", Password = "pass2" });
+        }
 
         public List<User> GetAll() => _users;
 
