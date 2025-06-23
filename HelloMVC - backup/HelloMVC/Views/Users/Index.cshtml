@@ -1,6 +1,14 @@
-﻿@model List< HelloMVC.Models.User>
+@model List< HelloMVC.Models.User>
 @{
     ViewData["Title"] = "Управление пользователями";
+}
+
+@functions {
+    public async Task NotifyDataIsEmpty()
+    {
+        <h3>Данные отсутствуют!</h3>
+        <a asp-action="Index">Перезагрузить страницу</a>
+    }
 }
 
 <h1>@ViewData["Title"]</h1>
@@ -25,6 +33,18 @@
         </div>
     </div>
 </form>
+
+
+@if (Model == null)
+{
+    NotifyDataIsEmpty();
+    return;
+}
+else if (Model.Count == 0)
+{
+    NotifyDataIsEmpty();
+    return;
+}
 
 <table class="table mt-4">
     <thead>
